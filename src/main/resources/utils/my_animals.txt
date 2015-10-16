@@ -1,0 +1,12 @@
+﻿begin
+Wolf,5,2,Gray,Jack,male
+Lion,4,6,Red,Konan,male
+Parrot,5,1,Green,Koki,female
+Wolf,4,3,Dark,Vasya,male
+Lion,5,2,Red,Okolapt,male
+Parrot,1,1,Blue,Mario,male
+Parrot,1,1,Rose,Marina,female
+Wolf,3,4,Gray,Aloha,female
+Wolf,4,3,Dark,Mickey,female
+Wolf,4,3,Dark,Sasha,female
+Lion,2,7,White,Anna,female
