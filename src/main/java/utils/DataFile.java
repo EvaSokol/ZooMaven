@@ -16,7 +16,6 @@ import java.util.LinkedList;
 
 public class DataFile {
 
-    private static String filepath = "src\\main\\resources\\utils\\my_animals.txt";
     private static LinkedList<Animal> animalList;
     private static int animalCount = 0;
     private static HashSet<String> typeSet = new HashSet<>();
@@ -24,16 +23,16 @@ public class DataFile {
 
     private DataFile() {}
 
-    public static LinkedList<Animal> getAnimalList() {
+    public static LinkedList<Animal> getAnimalList(String filepath) {
         if (dataFile == null)
             dataFile = new DataFile();
-            animalList = initAnimalList();
+            animalList = initAnimalList(filepath);
         return animalList;
     }
 
-    private static LinkedList<Animal> initAnimalList() {
+    private static LinkedList<Animal> initAnimalList(String filepath) {
         String animal_type;
-        LinkedList<String[]> data_list = getArrayData();
+        LinkedList<String[]> data_list = getArrayData(filepath);
         LinkedList<Animal> AnimalList = new LinkedList<>();
 
         for (String[] line : data_list) {
@@ -62,7 +61,7 @@ public class DataFile {
         return animalCount;
     }
 
-    private static ArrayList<String> ReadFile(){
+    private static ArrayList<String> ReadFile(String filepath){
         ArrayList<String> stringBuffer = new ArrayList<>();
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filepath))) {
             String line;
@@ -75,9 +74,9 @@ public class DataFile {
         return stringBuffer;
     }
 
-    private static LinkedList<String[]> getArrayData() {
+    private static LinkedList<String[]> getArrayData(String filepath) {
         //get data from file to string
-        ArrayList<String> stringBuffer = ReadFile();
+        ArrayList<String> stringBuffer = ReadFile(filepath);
         stringBuffer.remove(0); //remove first service string
 
         LinkedList<String[]> animal_list = new LinkedList<String[]>();

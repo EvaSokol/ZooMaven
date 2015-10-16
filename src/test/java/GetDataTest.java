@@ -8,13 +8,16 @@ import utils.DataFile;
 import java.util.LinkedList;
 
 /**
- * Created by esokolyanskaya on 16/10/2015.
+ * Created by Eva Sokolyanskaya on 16/10/2015.
+ * First test to check TestNG works correctly.
  */
 public class GetDataTest {
 
+    String filepath = "src\\main\\resources\\utils\\my_animals.txt";
+
     @Test
     public void PrintAnimals() {
-        LinkedList<Animal> animalList = DataFile.getAnimalList();
+        LinkedList<Animal> animalList = DataFile.getAnimalList(filepath);
         Actions.printAnimalList(animalList);
         Assert.assertEquals(DataFile.getAnimalCount(), animalList.size());
     }
