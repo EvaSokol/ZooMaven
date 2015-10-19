@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<zoo>
+    <animal age="5" color="Gray" height="2" name="Jack" sex="male" type="Wolf"/>
+    <animal age="4" color="Red" height="6" name="Konan" sex="male" type="Lion"/>
+    <animal age="5" color="Green" height="1" name="Koki" sex="female" type="Parrot"/>
+    <animal age="4" color="Dark" height="3" name="Vasya" sex="male" type="Wolf"/>
+    <animal age="5" color="Red" height="2" name="Okolapt" sex="male" type="Lion"/>
+    <animal age="1" color="Blue" height="1" name="Mario" sex="male" type="Parrot"/>
+    <animal age="1" color="Rose" height="1" name="Marina" sex="female" type="Parrot"/>
+    <animal age="3" color="Gray" height="4" name="Aloha" sex="female" type="Wolf"/>
+    <animal age="4" color="Dark" height="3" name="Mickey" sex="female" type="Wolf"/>
+    <animal age="4" color="Dark" height="3" name="Sasha" sex="female" type="Wolf"/>
+    <animal age="2" color="White" height="7" name="Anna" sex="female" type="Lion"/>
+</zoo>

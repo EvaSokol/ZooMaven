@@ -1,6 +1,8 @@
 import animals.Animal;
 import utils.Actions;
+import utils.CreateXML;
 import utils.DataFile;
+import utils.GetXmlData;
 
 import java.util.LinkedList;
 
@@ -10,7 +12,15 @@ public class Run {
 
         String filepath = "src\\main\\resources\\utils\\my_animals.txt";
 
-        LinkedList<Animal> animalList = DataFile.getAnimalList(filepath);
+//        LinkedList<Animal> animalList = DataFile.getAnimalList(filepath);
+
+        String xmlFile = "src\\main\\resources\\utils\\my_xml.xml";
+
+        GetXmlData xmlData = new GetXmlData();
+        LinkedList<Animal> xmlAnimalList = xmlData.getAnimalList(xmlFile);
+        Actions.printAnimalList(xmlAnimalList);
+
+//        CreateXML xml = new CreateXML();
 
 //        System.out.println("There are " + DataFile.getAnimalCount() + " animals total in the list.");
 //
@@ -22,7 +32,7 @@ public class Run {
 //
 //        Actions.getAbilities(animalList.get(2)); // get list of abilities for some animal
 
-        sortByAge(animalList);
+//        sortByAge(animalList);
 
 //        Actions.printAnimalList(Actions.getSingleAnimals(animalList)); //print list of all single animals
 //
