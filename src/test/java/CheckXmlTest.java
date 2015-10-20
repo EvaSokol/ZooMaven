@@ -30,6 +30,7 @@ public class CheckXmlTest {
     public void CompareLists() {
 
         Assertion assertion = new Assertion();
+
         assertion.assertEquals(fileAnimalList, xmlAnimalList);
     }
 }

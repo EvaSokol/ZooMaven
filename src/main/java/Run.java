@@ -4,6 +4,7 @@ import utils.CreateXML;
 import utils.DataFile;
 import utils.GetXmlData;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Run {
@@ -12,13 +13,20 @@ public class Run {
 
         String filepath = "src\\main\\resources\\utils\\my_animals.txt";
 
-//        LinkedList<Animal> animalList = DataFile.getAnimalList(filepath);
+        LinkedList<Animal> animalList = DataFile.getAnimalList(filepath);
 
-        String xmlFile = "src\\main\\resources\\utils\\my_xml.xml";
+        animalList.sort(new Comparator<Animal>() {
+            @Override
+            public int compare(Animal o1, Animal o2) {
+                return 0;
+            }
+        });
 
-        GetXmlData xmlData = new GetXmlData();
-        LinkedList<Animal> xmlAnimalList = xmlData.getAnimalList(xmlFile);
-        Actions.printAnimalList(xmlAnimalList);
+//        String xmlFile = "src\\main\\resources\\utils\\my_xml.xml";
+//
+//        GetXmlData xmlData = new GetXmlData();
+//        LinkedList<Animal> xmlAnimalList = xmlData.getAnimalList(xmlFile);
+//        Actions.printAnimalList(xmlAnimalList);
 
 //        CreateXML xml = new CreateXML();
 

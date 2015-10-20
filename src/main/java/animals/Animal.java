@@ -1,7 +1,9 @@
 package animals;
 
-public abstract class Animal{
-//    public abstract class animals.Animal implements Comparator<animals.Animal>{
+import java.util.Comparator;
+
+//public abstract class Animal{
+    public abstract class Animal implements Comparator<Animal> {
 
 
     int age, height;
@@ -77,9 +79,17 @@ public abstract class Animal{
         System.out.println(this.type + " " + this.name + " " + this.sex + " " + this.getAge());
     }
 
-//    public int compare(animals.Animal animal1, animals.Animal animal2){
-//        return animal1.getAge() - animal2.getAge();
-//    }
+    public int compare(animals.Animal animal1, animals.Animal animal2){
+        if (animal1.getAge() == animal2.getAge()
+                & animal1.getSex().equalsIgnoreCase(animal2.getSex())
+                & animal1.getColor().equalsIgnoreCase(animal2.getColor())
+                & animal1.getType().equalsIgnoreCase(animal2.getType())
+                & animal1.getHeight() == animal2.getHeight()
+                & animal1.getName().equalsIgnoreCase(animal2.getName())
+                )
+            return 1;
+        else return 0;
+    }
 
 
 }

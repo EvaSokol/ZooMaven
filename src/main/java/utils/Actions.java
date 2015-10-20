@@ -150,6 +150,10 @@ public class Actions {
         animalList.sort((o1, o2) -> o1.getAge() - o2.getAge());
     }
 
+    public static void SortByName(LinkedList<Animal> animalList) {
+        animalList.sort((o1, o2) ->  o1.getName().compareToIgnoreCase(o2.getName()));
+    }
+
     public static LinkedList<Animal> getAllThisTypeOld(LinkedList<Animal> animalList, String type) {
         LinkedList<Animal> thisTypeAnimals= new LinkedList<>();
         for (Animal animal : animalList)
