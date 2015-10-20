@@ -27,7 +27,7 @@ public class CheckXmlTest {
     }
 
     @Test
-    public void PrintAnimals() {
+    public void CompareLists() {
 
         Assertion assertion = new Assertion();
         assertion.assertEquals(fileAnimalList, xmlAnimalList);
