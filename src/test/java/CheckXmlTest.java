@@ -31,6 +31,6 @@ public class CheckXmlTest {
 
         Assertion assertion = new Assertion();
 
-        assertion.assertEquals(fileAnimalList, xmlAnimalList);
+        assertion.assertEquals(xmlAnimalList.containsAll(fileAnimalList), true);
     }
 }
