@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * Created by Eva on 16.10.2015.
+ * Created by Eva Sokolyanskaya on 16.10.2015.
+ * Check if Sort by age works correctly.
  */
 public class SortByAgeTest {
 

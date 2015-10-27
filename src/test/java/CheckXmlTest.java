@@ -14,16 +14,26 @@ import java.util.LinkedList;
  */
 public class CheckXmlTest {
 
-    String filepath = "src\\main\\resources\\utils\\my_animals.txt";
-    String xmlFile = "src\\main\\resources\\utils\\my_xml.xml";
+    String filepath;
+    String xmlFile;
     LinkedList<Animal> fileAnimalList;
     LinkedList<Animal> xmlAnimalList;
+    LinkedList<String> fileAnimalNames;
+    LinkedList<String> xmlAnimalNames;
 
     @BeforeClass
     public void Preparations() {
+        filepath = "src\\main\\resources\\utils\\my_animals.txt";
         fileAnimalList = DataFile.getAnimalList(filepath);
+        fileAnimalNames = new LinkedList<>();
+        fileAnimalList.forEach(animal -> fileAnimalNames.add(animal.getName()));
+
+        xmlFile = "src\\main\\resources\\utils\\my_xml.xml";
         GetXmlData xmlData = new GetXmlData();
+        xmlAnimalNames = new LinkedList<>();
         xmlAnimalList= xmlData.getAnimalList(xmlFile);
+        xmlAnimalList.forEach(animal -> xmlAnimalNames.add(animal.getName()));
+
     }
 
     @Test
@@ -31,6 +41,6 @@ public class CheckXmlTest {
 
         Assertion assertion = new Assertion();
 
-        assertion.assertEquals(xmlAnimalList.containsAll(fileAnimalList), true);
+        assertion.assertEquals(xmlAnimalNames.containsAll(fileAnimalNames), true);
     }
 }

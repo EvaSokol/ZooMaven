@@ -10,6 +10,7 @@ import java.util.LinkedList;
 /**
  * Created by Eva Sokolyanskaya on 16/10/2015.
  * First test to check TestNG works correctly.
+ * Test to check if animals correctly got from file.
  */
 public class GetDataTest {
 
