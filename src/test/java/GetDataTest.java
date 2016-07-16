@@ -11,6 +11,7 @@ import java.util.LinkedList;
  * Created by Eva Sokolyanskaya on 16/10/2015.
  * First test to check TestNG works correctly.
  * Test to check if animals correctly got from file.
+ * Edited 16.07.2016 for testing purposes.
  */
 public class GetDataTest {
 
